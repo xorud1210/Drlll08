@@ -34,7 +34,10 @@ class BigBall:
         self.speed = random.randint(10,20)
 
     def update(self):
-      pass
+        if self.y > 55 + 41 // 2:
+            self.y -= self.speed
+        else:
+            self.y = 55 + 41 // 2
 
     def draw(self):
         self.image.draw(self.x, self.y, 41, 41)
@@ -45,7 +48,10 @@ class SmallBall:
         self.speed = random.randint(10, 20)
 
     def update(self):
-       pass
+        if self.y > 55 + 21 // 2:
+            self.y -= self.speed
+        else:
+            self.y = 55 + 21 // 2
 
     def draw(self):
         self.image.draw(self.x, self.y, 21, 21)
